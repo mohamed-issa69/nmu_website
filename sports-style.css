@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background-color: rgb(147, 0, 0);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    color: darkslategrey;
+}
+
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(images/photo-1588345921523-c2dcdb7f1dcd.avif) no-repeat center center/cover;
+}
+
+.main h2 {
+    color: black;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    color: darkred;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: black;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    background-color: darkred;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 15px;
+    transition: 0.7s;
+}
+
+.main-btn:hover {
+    background-color: rgb(109, 2, 2);
+    transform: scale(1.1);
+}
+
+
+.facilities {
+    padding: 100px 200px;
+}
+
+.title {
+    text-align: center;
+    color: darkred;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.7s;
+    width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    font-size: 4.5em;
+    color: darkred;
+}
+
+.info h3 {
+    color: darkred;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.info p {
+    color: black;
+    font-size: 0.9em;
+}
+
+
+.footer {
+    background-color: rgb(109, 0, 0);
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+.footer-title span {
+    color: rgb(64, 0, 0);
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Report Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 200px;
+    }
+
+    button {
+      background-color: darkred;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(106, 2, 2);
+    }
+
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .report-table th, .report-table td {
+      padding: 5px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    .report-table th {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Report Form</h2>
+
+    <form id="reportForm">
+      <label for="name">Student Name (Optional):</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      <label for="reportTitle">Report Title:</label>
+      <input type="text" id="reportTitle" name="reportTitle" placeholder="Enter your report title">
+
+      <label for="reportContent">Report Content:</label>
+      <textarea id="reportContent" name="reportContent" placeholder="Type your report here"></textarea>
+
+      <button type="submit">Submit Report</button>
+    </form>
+
+    <table class="report-table" id="reportTable"></table>
+
+    <script>
+      const reportForm = document.getElementById('reportForm');
+      const reportTable = document.getElementById('reportTable');
+
+      reportForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const studentName = document.getElementById('name').value;
+        const reportTitle = document.getElementById('reportTitle').value;
+        const reportContent = document.getElementById('reportContent').value;
+
+        
+        reportTable.innerHTML = '';
+
+        
+        const tableHeaderRow = document.createElement('tr');
+        tableHeaderRow.innerHTML = `<th>Student Name</th><th>Report Title</th><th>Report Content</th>`;
+        reportTable.appendChild(tableHeaderRow);
+
+      
+        const tableDataRow = document.createElement('tr');
+        tableDataRow.innerHTML = `<td>${studentName}</td><td>${reportTitle}</td><td>${reportContent}</td>`;
+        reportTable.appendChild(tableDataRow);
+      });
+    </script>
+  </div>
+</body>
+</html>

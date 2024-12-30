@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Attendance</h1>
+
+    <form id="attendanceForm">
+      <div class="form-group">
+        <label for="studentName">Instructor Name:</label>
+        <input type="text" id="studentName" name="studentName" required placeholder="Enter instructor name">
+      </div>
+
+      <div class="form-group">
+        <label for="studentID">Instructor ID:</label>
+        <input type="text" id="studentID" name="studentID" required placeholder="Enter instructor ID">
+      </div>
+
+      <div class="form-group">
+        <label for="attendanceStatus">Attendance Status:</label>
+        <select id="attendanceStatus" name="attendanceStatus" required>
+          <option value="Present">Present</option>
+          <option value="Absent">Absent</option>
+          <option value="Excused">Excused</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments (Optional):</label>
+        <textarea id="comments" name="comments" rows="3" placeholder="Enter any additional comments"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <div id="attendanceData">
+      <h2>Attendance Records</h2>
+      <table id="attendanceTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>instructor Name</th>
+            <th>instructor ID</th>
+            <th>Attendance Status</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
